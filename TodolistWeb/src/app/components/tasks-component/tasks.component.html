@@ -1,0 +1,18 @@
+ <div class="tasks-container">
+      <h2>Tasks</h2>
+      @if (projectId()) {
+        <div class="tasks-list">
+          @for (task of tasks(); track task.id) {
+            <div class="task-card">
+              <h3>{{ task.title }}</h3>
+              <p>{{ task.description }}</p>
+              <div class="task-status">
+                Status: {{ task.status }}
+              </div>
+            </div>
+          }
+        </div>
+      } @else {
+        <p>Select a project to view tasks</p>
+      }
+    </div>

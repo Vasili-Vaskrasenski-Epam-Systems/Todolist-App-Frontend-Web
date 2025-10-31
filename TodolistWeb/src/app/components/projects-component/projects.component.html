@@ -1,0 +1,12 @@
+<div class="projects-container">
+  <h2>Projects</h2>
+  <ul class="projects-list">
+    @for (project of projects(); track project.id) {
+      <li 
+        [class.active]="project.id === selectedProjectId()"
+        (click)="selectProject(project)">
+        {{ project.name }}
+      </li>
+    }
+  </ul>
+</div>
