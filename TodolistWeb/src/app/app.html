@@ -1,0 +1,23 @@
+<header class="app-header">
+  <nav>
+    <ul>
+      <li><a href="/home">Home</a></li>
+      <li><a href="/tasks">Tasks</a></li>
+      <li><a href="/profile">Profile</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="main">
+  <div>
+    <div class="content-container">
+      <app-projects (projectSelected)="onProjectSelected($event)" />
+      <app-tasks [projectId]="selectedProjectId()" />
+  </div>
+    <router-outlet />
+  </div>
+</main>
+
+<footer class="app-footer">
+  <p>&copy; 2025 TodolistWeb. All rights reserved.</p>
+</footer>
